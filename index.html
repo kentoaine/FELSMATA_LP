@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FELSMATA｜つねに健康な生活を、すべての人に。</title>
+<meta name="description" content="健康を左右するのは、生まれ持った体質より毎日の習慣。その約8割は生活習慣で変えられる。FELSMATAは、あなたの生活習慣の“調律”を助けるアプリ FELSTUNING をつくっています。" />
+<meta property="og:title" content="FELSMATA｜つねに健康な生活を、すべての人に。" />
+<meta property="og:description" content="生活習慣の“調律”パートナー、FELSTUNING。あなたの毎日のサインに気づき、次の一手を届けます。" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="assets/app-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css" />
+<style>
+  :root{
+    --navy:#0B1B2B; --deep:#060A16;
+    --teal:#33C2A6; --purple:#7D72D0; --lilac:#A77BDB;
+    --ink:#161a24; --muted:#5c6472; --line:#E7EAF0; --soft:#F4F6FA;
+    --grad:linear-gradient(120deg,#A77BDB 0%,#7D72D0 45%,#33C2A6 100%);
+    --mono:"Roboto Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;color:var(--ink);line-height:1.9;background:var(--navy);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+  a{color:inherit}
+  .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 200%;animation:gshift 9s ease infinite}
+  @keyframes gshift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.2em;font-weight:700;text-transform:uppercase;color:var(--teal)}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--grad);background-size:180% 180%;color:#fff;font-weight:700;font-size:16px;padding:16px 34px;border-radius:999px;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,background-position .5s ease;box-shadow:0 10px 30px rgba(125,114,208,.35);border:none;cursor:pointer}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 16px 42px rgba(125,114,208,.55);background-position:100% 50%}
+  .btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.28);box-shadow:none;color:#fff}
+  .btn.ghost:hover{border-color:var(--teal);box-shadow:none}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+  /* HERO — flat navy, kept */
+  .hero{position:relative;overflow:hidden;padding-bottom:104px;background:var(--navy);color:#fff}
+  .hero .orb{position:absolute;border-radius:50%;z-index:0;pointer-events:none;filter:blur(2px)}
+  .hero .o1{width:520px;height:520px;background:radial-gradient(circle at 40% 40%,rgba(123,94,167,.55),transparent 70%);top:-150px;right:-110px;animation:fl 20s ease-in-out infinite}
+  @keyframes fl{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,30px)}}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand img{height:52px}
+  .brand .wm{display:flex;flex-direction:column;line-height:1.1}
+  .brand .wm b{font-size:22px;font-weight:900;letter-spacing:.16em}
+  .brand .wm small{font-size:10px;letter-spacing:.32em;color:#9fb3c0;font-weight:500}
+  .nav a.navlink{font-size:14px;color:#cfe8dd;text-decoration:none;font-weight:500}
+  .hero-in{padding-top:58px}
+  .hero h1{font-size:clamp(33px,5.6vw,58px);font-weight:900;line-height:1.32;margin-top:22px}
+  .hero .lead{margin-top:26px;font-size:clamp(15px,2.3vw,18.5px);color:#c3d0da;max-width:660px}
+  .hero .lead b{color:#fff;font-weight:700}
+  .hero .cta{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap}
+  .hero .tags{margin-top:32px;display:flex;gap:10px;flex-wrap:wrap}
+  .hero .tags span{font-size:12.5px;color:#9fb0bd;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:6px 14px}
+
+  /* FLOW — one continuous gradient (no slide-cut) */
+  .flow{position:relative;color:#fff;background:linear-gradient(178deg,#0B1B2B 0%,#141636 34%,#241f4d 60%,#153f3a 100%)}
+  .flow .sec{padding:82px 0}
+  .flow .big{font-size:clamp(28px,5vw,46px);font-weight:900;line-height:1.45}
+  .flow .body{margin-top:20px;font-size:17px;color:#c8d4dc;max-width:760px}
+  .flow .kicker{font-size:clamp(20px,3.4vw,30px);font-weight:700;color:#e7edf2}
+
+  .statcard{margin-top:36px;max-width:660px;background:rgba(255,255,255,.05);border:1px solid transparent;border-radius:20px;padding:28px 30px;background-image:linear-gradient(rgba(20,22,54,.55),rgba(20,22,54,.55)),var(--grad);background-origin:border-box;background-clip:padding-box,border-box;box-shadow:0 20px 55px rgba(125,114,208,.22)}
+  .statcard .lab{display:flex;align-items:center;gap:9px;font-size:14px;color:#dfe7ec}
+  .statcard .lab i{color:var(--teal);font-size:20px}
+  .bar{margin:20px 0 12px;height:16px;border-radius:99px;background:rgba(255,255,255,.1);position:relative;overflow:hidden}
+  .bar .fillh{position:absolute;left:0;top:0;bottom:0;width:63%;background:var(--teal);border-radius:99px}
+  .bar .gap{position:absolute;right:0;top:0;bottom:0;width:37%;background:var(--grad);background-size:200% 200%;animation:gshift 6s ease infinite}
+  .statcard .ends{display:flex;justify-content:space-between;font-size:12px;color:#a7b6c1}
+  .statcard .gaptag{display:inline-block;margin-top:16px;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:#fff;background:var(--grad);background-size:180% 180%;padding:4px 14px;border-radius:999px;animation:gshift 6s ease infinite}
+  .statcard .huge{margin-top:12px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .statcard .huge b{font-family:var(--mono);font-size:clamp(52px,9vw,74px);font-weight:900;line-height:1}
+  .statcard .huge span{font-size:14px;color:#c8d4dc}
+  .statcard .sub{margin-top:10px;font-size:12.5px;color:#93a3b0}
+
+  .hope .num{font-family:var(--mono);font-size:clamp(64px,12vw,116px);font-weight:900;line-height:1}
+  .hope .cite{margin-top:22px;font-size:12px;color:#8296a3;max-width:640px}
+
+  /* BRIDGE to product */
+  .bridge{padding:70px 0 90px}
+  .bridge .card{max-width:820px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:40px 40px}
+  .bridge .card .pname{display:flex;align-items:baseline;gap:12px;margin:10px 0 14px;flex-wrap:wrap}
+  .bridge .card .pname b{font-size:30px;font-weight:900;letter-spacing:.06em}
+  .bridge .card .pname small{font-size:13px;color:#b7c4ce;letter-spacing:.14em}
+  .bridge .card p{font-size:16px;color:#c8d4dc}
+
+  /* PRODUCT — light */
+  .product{background:linear-gradient(180deg,#fff,var(--soft));color:var(--ink);padding:100px 0}
+  .p-head{display:flex;align-items:center;gap:16px}
+  .p-head img{width:60px;height:60px;border-radius:15px;box-shadow:0 10px 30px rgba(20,20,40,.16)}
+  .p-head .nm{font-size:26px;font-weight:900;letter-spacing:.05em;line-height:1.1}
+  .p-head .rd{font-size:11px;color:var(--muted);letter-spacing:.22em}
+  .beta{display:inline-block;background:#EAF6F0;color:#12805a;font-size:11.5px;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:.06em;margin-left:8px}
+  .product h2{font-size:clamp(27px,4.6vw,42px);font-weight:900;margin-top:26px;line-height:1.42}
+  .product .plead{margin-top:18px;font-size:18px;color:var(--muted);max-width:660px}
+  .product .plead b{color:var(--ink);font-weight:700}
+
+  .vprops{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .vp{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 26px;transition:transform .2s ease,box-shadow .2s ease}
+  .vp:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(20,20,40,.08)}
+  .vp .ic{width:48px;height:48px;border-radius:13px;background:rgba(125,114,208,.12);display:flex;align-items:center;justify-content:center;color:var(--purple);font-size:24px}
+  .vp .worry{margin-top:18px;font-size:14px;color:var(--muted);font-style:normal}
+  .vp .worry i{color:var(--purple);font-size:15px;vertical-align:-1px;margin-right:4px}
+  .vp h3{font-size:18.5px;font-weight:700;margin-top:8px}
+  .vp p{margin-top:10px;font-size:15px;color:var(--ink)}
+  .vp p b{color:#0f8f66}
+
+  /* TRY — mock + synced description */
+  .try{margin-top:76px}
+  .try .th{text-align:center}
+  .try .th .eyebrow{color:var(--purple);justify-content:center}
+  .try .th h3{font-size:clamp(22px,3.6vw,32px);font-weight:900;margin-top:14px}
+  .try .th p{font-size:15px;color:var(--muted);margin-top:12px}
+  .trybox{margin-top:36px;display:grid;grid-template-columns:420px 1fr;gap:32px;align-items:center}
+  .device{background:radial-gradient(120% 100% at 50% 0%,#EDE9FB,transparent 60%);border-radius:30px;padding:8px}
+  .device iframe{width:100%;height:792px;border:0;border-radius:24px;background:transparent;display:block}
+  .descs{display:flex;flex-direction:column;gap:12px}
+  .desc{display:flex;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:#fff;transition:opacity .3s ease,border-color .3s ease,transform .3s ease}
+  .desc .di{width:40px;height:40px;border-radius:11px;flex-shrink:0;background:var(--soft);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:21px}
+  .desc h4{font-size:15.5px;font-weight:700}
+  .desc p{font-size:13.5px;color:var(--muted);margin-top:3px}
+  .desc.active{border-color:var(--teal);transform:translateX(4px)}
+  .desc.active .di{background:var(--teal);color:#fff}
+  .trynote{text-align:center;font-size:13px;color:#98a2b0;margin-top:16px}
+  @media(min-width:881px){ .desc{opacity:.5} .desc.active{opacity:1} }
+
+  /* JOIN */
+  .join{background:linear-gradient(178deg,#153f3a 0%,#241f4d 45%,#0B1B2B 100%);color:#fff;padding:100px 0;text-align:center;position:relative}
+  .join .eyebrow{justify-content:center;color:var(--teal)}
+  .join h2{font-size:clamp(28px,5vw,44px);font-weight:900;margin-top:16px;line-height:1.38}
+  .join p{margin:22px auto 0;font-size:17px;color:#c8d4dc;max-width:600px}
+  .join .btn{margin-top:38px;font-size:18px;padding:19px 46px}
+  .join .priv{margin-top:20px;font-size:13px;color:#9fb3c0;display:inline-flex;align-items:center;gap:7px}
+  .join .priv i{color:var(--teal)}
+
+  /* FOOTER */
+  footer{background:var(--deep);color:#7f8ea0;padding:44px 0;font-size:12.5px}
+  footer .row{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+  footer img{height:30px}
+  footer .disc{margin-top:20px;line-height:1.85;font-size:11.5px;color:#67788a;max-width:820px}
+
+  @media(max-width:880px){
+    .vprops{grid-template-columns:1fr}
+    .trybox{grid-template-columns:1fr}
+    .device{max-width:420px;margin:0 auto}
+    .flow .sec,.product,.join{padding-top:64px;padding-bottom:64px}
+  }
+  @media(max-width:520px){
+    .nav{padding:18px 0}
+    .brand img{height:40px}
+    .brand .wm b{font-size:17px;letter-spacing:.08em}
+    .brand .wm small{font-size:9px;letter-spacing:.24em}
+    .nav a.navlink{display:none}
+    .hero h1{font-size:clamp(29px,8.2vw,40px)}
+    .hero{padding-bottom:80px}
+    .bridge .card{padding:30px 24px}
+    .statcard{padding:22px 20px}
+  }
+  @media(prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none} .g,.orb{animation:none} }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <span class="orb o1"></span>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brand">
+        <img src="assets/company-logo.png" alt="FELSMATA" />
+        <span class="wm"><b>FELSMATA</b><small>フェルスマータ</small></span>
+      </div>
+      <a class="navlink" href="#join">声を届ける →</a>
+    </nav>
+    <div class="hero-in">
+      <span class="eyebrow reveal">Longevity Brand</span>
+      <h1 class="reveal d1">「老化は、<span class="g">制御できる</span>」を、<br>証明していく。</h1>
+      <p class="lead reveal d2">FELSMATA（フェルスマータ）は、ウェアラブル×AIで、毎日の身体のデータを<b>「気づき」と「次の一手」</b>に変えるチーム。「なんだか今日は調子が出ない」——その<b>サインをいち早くとらえ</b>、休み方・動き方・食べ方のヒントを届けます。<b>いつも自分のベストで在りたい</b>、そんなあなたの毎日のために。</p>
+      <div class="cta reveal d3">
+        <a class="btn" href="#product">30秒でプロダクトを見る</a>
+        <a class="btn ghost" href="#join">声を届ける</a>
+      </div>
+      <div class="tags reveal d4">
+        <span>アプリ「FELSTUNING」β開発中</span><span>スマートウォッチ連携</span><span>生活習慣の“調律”</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== FLOW (one continuous gradient) ===== -->
+<div class="flow">
+
+  <!-- 願い -->
+  <section class="sec">
+    <div class="wrap">
+      <span class="eyebrow reveal">はじめに</span>
+      <p class="big reveal d1" style="margin-top:16px">「ずっと、健康でいたい。」<br>それはきっと、<span class="g">誰もが持つ願い</span>です。</p>
+    </div>
+  </section>
+
+  <!-- 現実（10年差） -->
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker reveal">でも現実には、こんな“差”があります。</p>
+      <div class="statcard reveal d1">
+        <div class="lab"><i class="ti ti-heartbeat" aria-hidden="true"></i>自分のことを自分でできる「健康な期間」と、寿命の差</div>
+        <div class="bar"><span class="fillh"></span><span class="gap"></span></div>
+        <div class="ends"><span>健康寿命</span><span>平均寿命</span></div>
+        <span class="gaptag">この“差”こそ、いちばん大事</span>
+        <div class="huge"><b class="g">約10<span style="font-size:.46em">年</span></b><span>——多くの人が、人生の最後の約10年を、<br>なんらかの不調とともに過ごしています。</span></div>
+        <p class="sub">男性 約8.5年／女性 約11.6年（厚生労働省 健康寿命関連指標より）</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 希望（80%は生活習慣） -->
+  <section class="sec hope">
+    <div class="wrap">
+      <p class="kicker reveal">でも、あきらめるのは、まだ早い。</p>
+      <p class="big reveal d1" style="margin-top:14px">その差を分けるのは、<br>生まれ持った体質ではありません。</p>
+      <p class="num g reveal d2" style="margin-top:24px">約80<span style="font-size:.4em">%</span></p>
+      <p class="big reveal d2" style="font-size:clamp(22px,3.6vw,32px)">——健康を左右するのは、<span style="color:var(--teal)">毎日の生活習慣</span>。</p>
+      <p class="body reveal d3">つまり、未来の健康の多くは、<b style="color:#fff">今日からの選び方ひとつで、変えていける</b>ということ。</p>
+      <p class="cite reveal d3">※双子研究では、寿命に対する遺伝の影響は約2割にとどまり、残りの多くは生活習慣・環境によるとされています（Herskind et al., <em>Human Genetics</em>, 1996）。</p>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="sec">
+    <div class="wrap">
+      <span class="eyebrow reveal">Our Mission</span>
+      <h2 class="big reveal d1" style="margin-top:16px">老化は制御可能であるという<br><span class="g">新しい常識</span>を、この日本に実装する。</h2>
+      <p class="body reveal d2">「歳だから仕方ない」を、「まだ、やれることがある」へ。<br>老いていくスピードは、決して一定ではありません。一人ひとりが自分のテンポで、人生をもっと長く、健やかに奏でていける。その“あたりまえ”を、社会に広げていきます。</p>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section class="sec">
+    <div class="wrap">
+      <span class="eyebrow reveal">Our Vision</span>
+      <h2 class="big reveal d1" style="margin-top:16px">つねに健康な生活を、<br><span class="g">日本中のすべての人に。</span></h2>
+      <p class="body reveal d2">年齢を重ねても、やりたいことを、やりたいままに。<br>不調や我慢に縛られる時間を、少しでも短く。健康なまま長く生きられる毎日を、特別な人だけのものにしない。<br><b style="color:#fff;font-size:18px">——それが、FELSMATAがめざす未来です。</b></p>
+    </div>
+  </section>
+
+  <!-- BRIDGE -->
+  <section class="bridge">
+    <div class="wrap">
+      <div class="card reveal">
+        <span class="eyebrow">その理想を、あなたの毎日から</span>
+        <div class="pname"><b class="g">FELSTUNING</b><small>フェルスチューニング</small></div>
+        <p>壮大な理想だけでは、暮らしは変わりません。だから私たちは、あなたの生活習慣を“調律”するアプリ <b style="color:#fff">FELSTUNING</b> をつくっています。楽器を少しずつ整えるように、日々のズレに気づき、無理なく整えていく。あなたの健康の伸びしろを、いちばん近くで支えるパートナーです。</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== PRODUCT ===== -->
+<section class="product" id="product">
+  <div class="wrap">
+    <div class="p-head reveal">
+      <img src="assets/app-icon.png" alt="FELSTUNING" />
+      <div>
+        <div class="nm">FELSTUNING<span class="beta">β 開発中</span></div>
+        <div class="rd">フェルスチューニング　by FELSMATA</div>
+      </div>
+    </div>
+    <h2 class="reveal d1">今日の身体が、<span style="color:var(--purple)">明日のあなた</span>をつくる。</h2>
+    <p class="plead reveal d2">「数字は見えるのに、どうすればいいかわからない」。多くのウェアラブルは、そこで止まります。<b>FELSTUNINGは、その一歩先へ。</b>あなたのデータを、毎日の“選択”に変えます。</p>
+
+    <div class="vprops">
+      <div class="vp reveal d1">
+        <div class="ic"><i class="ti ti-gauge" aria-hidden="true"></i></div>
+        <p class="worry"><i class="ti ti-quote" aria-hidden="true"></i>「大事な日に限って、なんだか重い」</p>
+        <h3>今日、ベストで動けるか</h3>
+        <p>起きた瞬間、睡眠・心拍・HRVをひとつのスコアに。攻めるか、整えるか。<b>今日の作戦を、朝いちばんに決められます。</b></p>
+      </div>
+      <div class="vp reveal d2">
+        <div class="ic"><i class="ti ti-bulb" aria-hidden="true"></i></div>
+        <p class="worry"><i class="ti ti-quote" aria-hidden="true"></i>「疲れが抜けない理由が、わからない」</p>
+        <h3>不調の“サイン”に気づける</h3>
+        <p>生活のなかの気になる変化を、AIがそっと指摘。思い当たる原因と、<b>次の一手が見えてきます。</b></p>
+      </div>
+      <div class="vp reveal d3">
+        <div class="ic"><i class="ti ti-message-circle" aria-hidden="true"></i></div>
+        <p class="worry"><i class="ti ti-quote" aria-hidden="true"></i>「体調管理は、いつも自己流で不安」</p>
+        <h3>ひとりで抱えない、相棒がいる</h3>
+        <p>気になることをチャットで相談。あなた好みのトーンで、<b>忙しい毎日にちゃんと伴走します。</b></p>
+      </div>
+      <div class="vp reveal d4">
+        <div class="ic"><i class="ti ti-salad" aria-hidden="true"></i></div>
+        <p class="worry"><i class="ti ti-quote" aria-hidden="true"></i>「忙しくて、食事はいつも後回し」</p>
+        <h3>頑張った身体を、ちゃんと労わる</h3>
+        <p>今のコンディションに合う食を、いくつかの選択肢で提案。<b>我慢ではなく、自分をケアする習慣へ。</b></p>
+      </div>
+    </div>
+
+    <div class="try">
+      <div class="th">
+        <span class="eyebrow reveal">Try it</span>
+        <h3 class="reveal d1">これが、<span style="color:var(--purple)">FELSTUNING</span>の体験です。</h3>
+        <p class="reveal d2">実際に触れます。タブを切り替えると、右側の説明も切り替わります。</p>
+      </div>
+      <div class="trybox">
+        <div class="device reveal">
+          <iframe src="mock.html" title="FELSTUNING インタラクティブデモ" loading="lazy"></iframe>
+        </div>
+        <div class="descs reveal d1">
+          <div class="desc" data-screen="home"><div class="di"><i class="ti ti-home" aria-hidden="true"></i></div><div><h4>ホーム</h4><p>今日のリカバリースコアと「攻め・整える」の判断、今日の調律メニューがひと目で。</p></div></div>
+          <div class="desc" data-screen="data"><div class="di"><i class="ti ti-chart-line" aria-hidden="true"></i></div><div><h4>データ</h4><p>睡眠・HRV・心拍・歩数の推移。数字の背景にある“なぜ”まで見えてくる。</p></div></div>
+          <div class="desc" data-screen="ai"><div class="di"><i class="ti ti-sparkles" aria-hidden="true"></i></div><div><h4>AIアドバイザー</h4><p>気になることを相談。あなたのデータを踏まえて、次の一手を提案します。</p></div></div>
+          <div class="desc" data-screen="food"><div class="di"><i class="ti ti-soup" aria-hidden="true"></i></div><div><h4>食の候補</h4><p>今のコンディションに合う食を、いくつかの選択肢で。選ぶのは、あなた。</p></div></div>
+          <div class="desc" data-screen="age"><div class="di"><i class="ti ti-timeline" aria-hidden="true"></i></div><div><h4>軌跡</h4><p>積み重ねた習慣が、どう実を結んでいるか。続けるほど、見えてくる。</p></div></div>
+        </div>
+      </div>
+      <p class="trynote">※ β開発中のイメージです。デザイン・機能は変更される場合があります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JOIN ===== -->
+<section class="join" id="join">
+  <div class="wrap">
+    <span class="eyebrow reveal">Join us</span>
+    <h2 class="reveal d1">このプロダクトを、<br><span class="g">一緒に育ててください。</span></h2>
+    <p class="reveal d2">FELSTUNINGはまだ開発中です。あなたの「こんなのが欲しい」「ここが不安」という声が、次の機能をつくります。まずは5分ほどのアンケートから。よければオンラインインタビューにもご協力ください。</p>
+    <a class="btn reveal d3" id="form-btn" href="#" target="_blank" rel="noopener">アンケートに答える（約5分）</a>
+    <div class="reveal d3"><span class="priv"><i class="ti ti-lock" aria-hidden="true"></i>いただいた回答はサービス改善のためだけに使い、第三者に提供することはありません。</span></div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <img src="assets/company-logo.png" alt="FELSMATA" />
+      <div style="text-align:right">© 2026 FELSMATA<br>アプリ FELSTUNING β開発中</div>
+    </div>
+    <p class="disc">FELSTUNING（フェルスチューニング）は、健康管理をサポートする情報提供および生活習慣の選択支援を目的としたサービスであり、医療行為・診断・治療・特定の効果を保証するものではありません。表示される情報は一般的な参考情報であり、個別の医学的判断に代わるものではありません。体調に不安がある場合や治療中の方は、医師などの専門家にご相談ください。</p>
+  </div>
+</footer>
+
+<script>
+  var GOOGLE_FORM_URL = "https://forms.gle/UVsfnjHLkSDzmzos7";
+  var fb = document.getElementById('form-btn');
+  if (GOOGLE_FORM_URL && GOOGLE_FORM_URL.indexOf('XXXX') === -1){ fb.href = GOOGLE_FORM_URL; }
+  else { fb.addEventListener('click', function(e){ e.preventDefault(); alert('Googleフォームのリンクを設定してください（index.html の GOOGLE_FORM_URL）'); }); }
+
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // sync mock screen -> description highlight
+  function setDesc(k){
+    document.querySelectorAll('.desc').forEach(function(d){ d.classList.toggle('active', d.getAttribute('data-screen')===k); });
+  }
+  setDesc('home');
+  window.addEventListener('message', function(e){ if(e.data && e.data.felstuningScreen){ setDesc(e.data.felstuningScreen); } });
+</script>
+</body>
+</html>
