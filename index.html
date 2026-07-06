@@ -54,8 +54,6 @@
   .hero .lead{margin-top:26px;font-size:clamp(15px,2.3vw,18.5px);color:#c3d0da;max-width:660px}
   .hero .lead b{color:#fff;font-weight:700}
   .hero .cta{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap}
-  .hero .tags{margin-top:32px;display:flex;gap:10px;flex-wrap:wrap}
-  .hero .tags span{font-size:12.5px;color:#9fb0bd;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:6px 14px}
 
   /* FLOW — one continuous gradient (no slide-cut) */
   .flow{position:relative;color:#fff;background:linear-gradient(178deg,#0B1B2B 0%,#141636 34%,#241f4d 60%,#153f3a 100%)}
@@ -71,14 +69,13 @@
   .bar .fillh{position:absolute;left:0;top:0;bottom:0;width:63%;background:var(--teal);border-radius:99px}
   .bar .gap{position:absolute;right:0;top:0;bottom:0;width:37%;background:var(--grad);background-size:200% 200%;animation:gshift 6s ease infinite}
   .statcard .ends{display:flex;justify-content:space-between;font-size:12px;color:#a7b6c1}
-  .statcard .gaptag{display:inline-block;margin-top:16px;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:#fff;background:var(--grad);background-size:180% 180%;padding:4px 14px;border-radius:999px;animation:gshift 6s ease infinite}
   .statcard .huge{margin-top:12px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
   .statcard .huge b{font-family:var(--mono);font-size:clamp(52px,9vw,74px);font-weight:900;line-height:1}
   .statcard .huge span{font-size:14px;color:#c8d4dc}
   .statcard .sub{margin-top:10px;font-size:12.5px;color:#93a3b0}
 
   .hope .num{font-family:var(--mono);font-size:clamp(64px,12vw,116px);font-weight:900;line-height:1}
-  .hope .cite{margin-top:22px;font-size:12px;color:#8296a3;max-width:640px}
+  .hope .cite{margin-top:22px;font-size:12px;color:#8fa2b3;max-width:640px}
 
   /* BRIDGE to product */
   .bridge{padding:70px 0 90px}
@@ -87,6 +84,7 @@
   .bridge .card .pname b{font-size:30px;font-weight:900;letter-spacing:.06em}
   .bridge .card .pname small{font-size:13px;color:#b7c4ce;letter-spacing:.14em}
   .bridge .card p{font-size:16px;color:#c8d4dc}
+  .bridge .lead-in{font-size:13px;letter-spacing:.08em;color:#9fb3c0;font-weight:700}
 
   /* PRODUCT — light */
   .product{background:linear-gradient(180deg,#fff,var(--soft));color:var(--ink);padding:100px 0}
@@ -108,6 +106,10 @@
   .vp h3{font-size:18.5px;font-weight:700;margin-top:8px}
   .vp p{margin-top:10px;font-size:15px;color:var(--ink)}
   .vp p b{color:#0f8f66}
+  .vp.wide{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;background:linear-gradient(120deg,rgba(167,123,219,.07),rgba(51,194,166,.07)),#fff}
+  .vp.wide .ic{background:rgba(51,194,166,.14);color:#0f8f66}
+  .vp.wide .worry{margin-top:0}
+  @media(max-width:640px){ .vp.wide{grid-template-columns:1fr} }
 
   /* TRY — mock + synced description */
   .try{margin-top:76px}
@@ -125,7 +127,7 @@
   .desc p{font-size:13.5px;color:var(--muted);margin-top:3px}
   .desc.active{border-color:var(--teal);transform:translateX(4px)}
   .desc.active .di{background:var(--teal);color:#fff}
-  .trynote{text-align:center;font-size:13px;color:#98a2b0;margin-top:16px}
+  .trynote{text-align:center;font-size:13px;color:#6b7484;margin-top:16px}
   @media(min-width:881px){ .desc{opacity:.5} .desc.active{opacity:1} }
 
   /* JOIN */
@@ -141,7 +143,7 @@
   footer{background:var(--deep);color:#7f8ea0;padding:44px 0;font-size:12.5px}
   footer .row{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
   footer img{height:30px}
-  footer .disc{margin-top:20px;line-height:1.85;font-size:11.5px;color:#67788a;max-width:820px}
+  footer .disc{margin-top:20px;line-height:1.85;font-size:11.5px;color:#7e8fa3;max-width:820px}
 
   @media(max-width:880px){
     .vprops{grid-template-columns:1fr}
@@ -174,18 +176,14 @@
         <img src="assets/company-logo.png" alt="FELSMATA" />
         <span class="wm"><b>FELSMATA</b><small>フェルスマータ</small></span>
       </div>
-      <a class="navlink" href="#join">声を届ける →</a>
+      <a class="navlink" href="#join">アンケートに答える →</a>
     </nav>
     <div class="hero-in">
-      <span class="eyebrow reveal">Longevity Brand</span>
-      <h1 class="reveal d1">「老化は、<span class="g">制御できる</span>」を、<br>証明していく。</h1>
-      <p class="lead reveal d2">FELSMATA（フェルスマータ）は、ウェアラブル×AIで、毎日の身体のデータを<b>「気づき」と「次の一手」</b>に変えるチーム。「なんだか今日は調子が出ない」——その<b>サインをいち早くとらえ</b>、休み方・動き方・食べ方のヒントを届けます。<b>いつも自分のベストで在りたい</b>、そんなあなたの毎日のために。</p>
-      <div class="cta reveal d3">
+      <h1 class="reveal">「老化は、<span class="g">制御できる</span>」を、<br>証明していく。</h1>
+      <p class="lead reveal d1">FELSMATA（フェルスマータ）は、ウェアラブル×AIで、毎日の身体のデータを<b>「気づき」と「次の一手」</b>に変えるチーム。「なんだか今日は調子が出ない」——その<b>サインをいち早くとらえ</b>、休み方・動き方・食べ方のヒントを届けます。</p>
+      <div class="cta reveal d2">
         <a class="btn" href="#product">30秒でプロダクトを見る</a>
-        <a class="btn ghost" href="#join">声を届ける</a>
-      </div>
-      <div class="tags reveal d4">
-        <span>アプリ「FELSTUNING」β開発中</span><span>スマートウォッチ連携</span><span>生活習慣の“調律”</span>
+        <a class="btn ghost" href="#join">アンケートに答える</a>
       </div>
     </div>
   </div>
@@ -197,8 +195,7 @@
   <!-- 願い -->
   <section class="sec">
     <div class="wrap">
-      <span class="eyebrow reveal">はじめに</span>
-      <p class="big reveal d1" style="margin-top:16px">「ずっと、健康でいたい。」<br>それはきっと、<span class="g">誰もが持つ願い</span>です。</p>
+      <p class="big reveal">「ずっと、健康でいたい。」<br>それはきっと、<span style="color:var(--teal)">誰もが持つ願い</span>です。</p>
     </div>
   </section>
 
@@ -210,7 +207,6 @@
         <div class="lab"><i class="ti ti-heartbeat" aria-hidden="true"></i>自分のことを自分でできる「健康な期間」と、寿命の差</div>
         <div class="bar"><span class="fillh"></span><span class="gap"></span></div>
         <div class="ends"><span>健康寿命</span><span>平均寿命</span></div>
-        <span class="gaptag">この“差”こそ、いちばん大事</span>
         <div class="huge"><b class="g">約10<span style="font-size:.46em">年</span></b><span>——多くの人が、人生の最後の約10年を、<br>なんらかの不調とともに過ごしています。</span></div>
         <p class="sub">男性 約8.5年／女性 約11.6年（厚生労働省 健康寿命関連指標より）</p>
       </div>
@@ -233,7 +229,7 @@
   <section class="sec">
     <div class="wrap">
       <span class="eyebrow reveal">Our Mission</span>
-      <h2 class="big reveal d1" style="margin-top:16px">老化は制御可能であるという<br><span class="g">新しい常識</span>を、この日本に実装する。</h2>
+      <h2 class="big reveal d1" style="margin-top:16px">老化は制御可能であるという<br><span style="color:var(--teal)">新しい常識</span>を、この日本に実装する。</h2>
       <p class="body reveal d2">「歳だから仕方ない」を、「まだ、やれることがある」へ。<br>老いていくスピードは、決して一定ではありません。一人ひとりが自分のテンポで、人生をもっと長く、健やかに奏でていける。その“あたりまえ”を、社会に広げていきます。</p>
     </div>
   </section>
@@ -242,7 +238,7 @@
   <section class="sec">
     <div class="wrap">
       <span class="eyebrow reveal">Our Vision</span>
-      <h2 class="big reveal d1" style="margin-top:16px">つねに健康な生活を、<br><span class="g">日本中のすべての人に。</span></h2>
+      <h2 class="big reveal d1" style="margin-top:16px">つねに健康な生活を、<br><span style="color:var(--teal)">日本中のすべての人に。</span></h2>
       <p class="body reveal d2">年齢を重ねても、やりたいことを、やりたいままに。<br>不調や我慢に縛られる時間を、少しでも短く。健康なまま長く生きられる毎日を、特別な人だけのものにしない。<br><b style="color:#fff;font-size:18px">——それが、FELSMATAがめざす未来です。</b></p>
     </div>
   </section>
@@ -251,7 +247,7 @@
   <section class="bridge">
     <div class="wrap">
       <div class="card reveal">
-        <span class="eyebrow">その理想を、あなたの毎日から</span>
+        <p class="lead-in">その理想を、あなたの毎日から</p>
         <div class="pname"><b class="g">FELSTUNING</b><small>フェルスチューニング</small></div>
         <p>壮大な理想だけでは、暮らしは変わりません。だから私たちは、あなたの生活習慣を“調律”するアプリ <b style="color:#fff">FELSTUNING</b> をつくっています。楽器を少しずつ整えるように、日々のズレに気づき、無理なく整えていく。あなたの健康の伸びしろを、いちばん近くで支えるパートナーです。</p>
       </div>
@@ -273,6 +269,14 @@
     <p class="plead reveal d2">「数字は見えるのに、どうすればいいかわからない」。多くのウェアラブルは、そこで止まります。<b>FELSTUNINGは、その一歩先へ。</b>あなたのデータを、毎日の“選択”に変えます。</p>
 
     <div class="vprops">
+      <div class="vp wide reveal">
+        <div class="ic"><i class="ti ti-database" aria-hidden="true"></i></div>
+        <div>
+          <p class="worry"><i class="ti ti-quote" aria-hidden="true"></i>「データは何年分も溜まっているのに、見返したことがない」</p>
+          <h3>「測るだけ」を、終わらせる</h3>
+          <p>ウェアラブルに眠っているデータを自動でまとめ、週・月の流れをAIがひと言に。手入力もExcelも、もういりません。<b>溜まっていたデータが、あなたの味方になります。</b></p>
+        </div>
+      </div>
       <div class="vp reveal d1">
         <div class="ic"><i class="ti ti-gauge" aria-hidden="true"></i></div>
         <p class="worry"><i class="ti ti-quote" aria-hidden="true"></i>「大事な日に限って、なんだか重い」</p>
@@ -281,9 +285,9 @@
       </div>
       <div class="vp reveal d2">
         <div class="ic"><i class="ti ti-bulb" aria-hidden="true"></i></div>
-        <p class="worry"><i class="ti ti-quote" aria-hidden="true"></i>「疲れが抜けない理由が、わからない」</p>
-        <h3>不調の“サイン”に気づける</h3>
-        <p>生活のなかの気になる変化を、AIがそっと指摘。思い当たる原因と、<b>次の一手が見えてきます。</b></p>
+        <p class="worry"><i class="ti ti-quote" aria-hidden="true"></i>「睡眠時間はとっているのに、朝がつらい」</p>
+        <h3>“がんばりすぎ”のサインに気づける</h3>
+        <p>いつもの自分とのズレを、AIがそっと指摘。無理が続く前に、思い当たる原因と<b>次の一手が見えてきます。</b></p>
       </div>
       <div class="vp reveal d3">
         <div class="ic"><i class="ti ti-message-circle" aria-hidden="true"></i></div>
@@ -301,8 +305,7 @@
 
     <div class="try">
       <div class="th">
-        <span class="eyebrow reveal">Try it</span>
-        <h3 class="reveal d1">これが、<span style="color:var(--purple)">FELSTUNING</span>の体験です。</h3>
+        <h3 class="reveal">これが、<span style="color:var(--purple)">FELSTUNING</span>の体験です。</h3>
         <p class="reveal d2">実際に触れます。タブを切り替えると、右側の説明も切り替わります。</p>
       </div>
       <div class="trybox">
