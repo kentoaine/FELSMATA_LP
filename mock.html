@@ -94,7 +94,7 @@
       <text x="60" y="75" text-anchor="middle" font-size="9.5" class="svm">RECOVERY</text>
     </svg>
     <div style="flex:1">
-      <p style="margin:0 0 8px;font-size:13px;font-weight:500"><span class="gtx">今日は「攻め」の日</span></p>
+      <p style="margin:0 0 8px;font-size:13px;font-weight:500"><span class="gtx">今日は「攻める」日</span></p>
       <div style="font-size:11px;color:var(--sub);line-height:1.8">
         <div style="display:flex;justify-content:space-between"><span>睡眠</span><span class="mono" style="color:var(--tl);font-weight:500">92</span></div>
         <div style="display:flex;justify-content:space-between"><span>HRVバランス</span><span class="mono" style="color:var(--pu);font-weight:500">64</span></div>
@@ -104,11 +104,11 @@
   </div>
   <button onclick="go('ai')" class="emx" style="width:100%;display:flex;align-items:center;gap:11px;padding:12px 14px;border-radius:14px;cursor:pointer;margin-bottom:14px;text-align:left">
     <span style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#A77BDB,#33C2A6);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ti ti-sparkles" style="color:#fff;font-size:16px" aria-hidden="true"></i></span>
-    <span style="flex:1"><span style="display:block;font-size:12.5px;color:#fff;font-weight:500">朝の調律が届いています</span><span style="display:block;font-size:11px;color:#CECBF6">深い睡眠が少なめ。今日の戦略を確認 →</span></span>
+    <span style="flex:1"><span style="display:block;font-size:12.5px;color:#fff;font-weight:500">朝の調律が届いています</span><span style="display:block;font-size:11px;color:#CECBF6">深い睡眠が少なめ。朝の調律を確認 →</span></span>
   </button>
   <p style="margin:0 0 8px;font-size:13px;font-weight:500;color:var(--tx)">今日の調律</p>
-  <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>ランチ後に5分の散歩</span></div>
-  <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>夜：リカバリー食（3候補から選択）</span></div>
+  <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>午前の集中前に5分の散歩</span></div>
+  <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>夜：立て直し食（3候補から選択）</span></div>
   <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>22:30までに就寝準備</span></div>
 </div>
 
@@ -130,8 +130,8 @@
     <text x="286" y="84" font-size="10" class="svm" font-family="monospace">7/3</text>
   </svg>
   <div class="emx" style="border-radius:14px;padding:13px 15px">
-    <p style="margin:0 0 5px;font-size:12px;font-weight:500;color:#9FE1CB"><i class="ti ti-cpu" aria-hidden="true"></i> AI解析：なぜHRVが下がった？</p>
-    <p style="margin:0;font-size:12px;line-height:1.7;color:#E8E7F5">水曜の会食（21時以降の食事＋飲酒）の翌朝に低下パターンを検出。数字だけでなく「原因」まで分解して提示します。</p>
+    <p style="margin:0 0 5px;font-size:12px;font-weight:500;color:#9FE1CB"><i class="ti ti-cpu" aria-hidden="true"></i> AI解析：なぜ今朝は重い？</p>
+    <p style="margin:0;font-size:12px;line-height:1.7;color:#E8E7F5">水曜の会食（21時以降の食事＋飲酒）の翌朝に近い傾向があります。断定せず、根拠と今日試せる一手をあわせて提示します。</p>
   </div>
 </div>
 
@@ -146,12 +146,12 @@
     <button id="p2" onclick="setPersona(2)" style="font-size:11px;padding:4px 11px;border-radius:99px;border:0.5px solid var(--bd);background:var(--bg);color:var(--sub)">コーチ型</button>
   </div>
   <div id="chat" style="flex:1">
-    <div class="abub"><div class="orb"><i class="ti ti-sparkles" style="color:#fff;font-size:14px" aria-hidden="true"></i></div><p>おはようございます。昨夜の睡眠は6時間42分——量は十分ですが、深い睡眠が平均より21分少なめでした。原因は水曜の会食パターンの名残とみています。</p></div>
-    <div class="abub"><div class="orb"><i class="ti ti-sparkles" style="color:#fff;font-size:14px" aria-hidden="true"></i></div><p>今夜のリカバリー食は3つの候補を「食」タブに用意しました。自律神経の回復を優先するなら発酵スープがおすすめですが、選ぶのはあなたです。</p></div>
+    <div class="abub"><div class="orb"><i class="ti ti-sparkles" style="color:#fff;font-size:14px" aria-hidden="true"></i></div><p>おはようございます。昨夜の睡眠は6時間42分——量は十分ですが、軽めがあなたの平常時より21分少なめでした。水曜の会食パターンに近い傾向がありそうです。</p></div>
+    <div class="abub"><div class="orb"><i class="ti ti-sparkles" style="color:#fff;font-size:14px" aria-hidden="true"></i></div><p>今夜の立て直し候補を「食」タブに3つ用意しました。重さを避けたい日には発酵スープがおすすめの一つですが、選ぶのはあなたです。</p></div>
   </div>
   <div style="display:flex;gap:7px;overflow-x:auto;padding:10px 0 8px">
-    <button class="qchip" onclick="ask(1)">なぜ深い睡眠が減った？</button>
-    <button class="qchip" onclick="ask(2)">プレゼン前の最適行動は？</button>
+    <button class="qchip" onclick="ask(1)">なぜ軽めが減った？</button>
+    <button class="qchip" onclick="ask(2)">プレゼン前の一手は？</button>
     <button class="qchip" onclick="ask(3)">3候補の違いは？</button>
   </div>
   <div style="display:flex;gap:8px;align-items:center;border:0.5px solid var(--bd);border-radius:99px;padding:5px 5px 5px 16px">
@@ -167,11 +167,11 @@
   <div class="fcd sel" id="f1" onclick="pick(1)">
     <div class="sic" style="background:var(--tlbg);color:var(--tl)"><i class="ti ti-soup" aria-hidden="true"></i></div>
     <div style="flex:1;min-width:0">
-      <p style="margin:0;font-size:13px;font-weight:500;color:var(--tx)">GABA発酵リカバリースープ</p>
+      <p style="margin:0;font-size:13px;font-weight:500;color:var(--tx)">発酵スープセット</p>
       <p style="margin:1px 0 4px;font-size:10.5px;color:var(--mut)">新潟・佐渡醸造</p>
-      <div style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">深い睡眠</span><span class="tag" style="background:var(--pubg);color:var(--pu)">自律神経</span></div>
+      <div style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">軽め</span><span class="tag" style="background:var(--pubg);color:var(--pu)">温かい</span></div>
     </div>
-    <div style="text-align:right"><p class="mono" style="margin:0;font-size:15px;font-weight:500;color:var(--tl)">96</p><p style="margin:0;font-size:9px;color:var(--mut)">一致度</p></div>
+    <div style="text-align:right"><p class="mono" style="margin:0;font-size:15px;font-weight:500;color:var(--tl)">96</p><p style="margin:0;font-size:9px;color:var(--mut)">候補度</p></div>
     <div class="fck"><i class="ti ti-check" aria-hidden="true"></i></div>
   </div>
 
@@ -180,9 +180,9 @@
     <div style="flex:1;min-width:0">
       <p style="margin:0;font-size:13px;font-weight:500;color:var(--tx)">低GI玄米と麹の雑炊</p>
       <p style="margin:1px 0 4px;font-size:10.5px;color:var(--mut)">新潟・魚沼ファーム</p>
-      <div style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">血糖安定</span><span class="tag" style="background:var(--pubg);color:var(--pu)">腸内環境</span></div>
+      <div style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">腹持ち</span><span class="tag" style="background:var(--pubg);color:var(--pu)">発酵</span></div>
     </div>
-    <div style="text-align:right"><p class="mono" style="margin:0;font-size:15px;font-weight:500;color:var(--pu)">88</p><p style="margin:0;font-size:9px;color:var(--mut)">一致度</p></div>
+    <div style="text-align:right"><p class="mono" style="margin:0;font-size:15px;font-weight:500;color:var(--pu)">88</p><p style="margin:0;font-size:9px;color:var(--mut)">候補度</p></div>
     <div class="fck"><i class="ti ti-check" aria-hidden="true"></i></div>
   </div>
 
@@ -191,13 +191,13 @@
     <div style="flex:1;min-width:0">
       <p style="margin:0;font-size:13px;font-weight:500;color:var(--tx)">酒粕アミノ酸ドリンク</p>
       <p style="margin:1px 0 4px;font-size:10.5px;color:var(--mut)">新潟・越後蔵元</p>
-      <div style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">疲労回復</span><span class="tag" style="background:var(--pubg);color:var(--pu)">筋リカバリー</span></div>
+      <div style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">ノンカフェイン</span><span class="tag" style="background:var(--pubg);color:var(--pu)">水分補給</span></div>
     </div>
-    <div style="text-align:right"><p class="mono" style="margin:0;font-size:15px;font-weight:500;color:var(--pu)">84</p><p style="margin:0;font-size:9px;color:var(--mut)">一致度</p></div>
+    <div style="text-align:right"><p class="mono" style="margin:0;font-size:15px;font-weight:500;color:var(--pu)">84</p><p style="margin:0;font-size:9px;color:var(--mut)">候補度</p></div>
     <div class="fck"><i class="ti ti-check" aria-hidden="true"></i></div>
   </div>
 
-  <p id="fsel" style="margin:2px 0 12px;font-size:11px;color:var(--tl)"><i class="ti ti-truck-delivery" aria-hidden="true"></i> 選択中：GABA発酵リカバリースープ ｜ 7月6日（月）便に追加</p>
+  <p id="fsel" style="margin:2px 0 12px;font-size:11px;color:var(--tl)"><i class="ti ti-truck-delivery" aria-hidden="true"></i> 選択中：発酵スープセット ｜ 7月6日（月）便に追加</p>
 
   <div style="border:0.5px solid var(--bd);border-radius:14px;padding:12px 14px">
     <div style="display:flex;justify-content:space-between;margin-bottom:7px"><span style="font-size:12px;font-weight:500;color:var(--tx)">今週のご褒美ロック解除</span><span id="wkcnt" class="mono" style="font-size:12px;color:var(--pu);font-weight:500">2/3</span></div>
@@ -208,30 +208,30 @@
 </div>
 
 <div class="et-scr" id="scr-age" style="padding:14px 20px 8px">
-  <p style="margin:0 0 12px;font-size:19px;font-weight:500;color:var(--tx)">あなたの軌跡</p>
+  <p style="margin:0 0 12px;font-size:19px;font-weight:500;color:var(--tx)">マイ・スリープライン</p>
   <div class="emx" style="border-radius:16px;padding:16px;margin-bottom:12px">
-    <p style="margin:0 0 10px;font-size:11px;color:#AFA9EC;letter-spacing:1px">BIOLOGICAL AGE ESTIMATE</p>
+    <p style="margin:0 0 10px;font-size:11px;color:#AFA9EC;letter-spacing:1px">MY SLEEP LINE</p>
     <div style="display:flex;align-items:baseline;gap:12px">
-      <span class="mono" style="font-size:38px;font-weight:500;color:#fff">22.4</span>
-      <span style="font-size:12px;color:#9FE1CB">実年齢 24 に対して <span class="mono" style="font-weight:500">−1.6歳</span></span>
+      <span class="mono" style="font-size:38px;font-weight:500;color:#fff">6:35</span>
+      <span style="font-size:12px;color:#9FE1CB">集中チェックが安定しやすい睡眠ライン</span>
     </div>
-    <p style="margin:8px 0 0;font-size:11px;line-height:1.6;color:#CECBF6">2月からの介入（睡眠調律＋発酵食）があなたの老化軌跡を変えています。</p>
+    <p style="margin:8px 0 0;font-size:11px;line-height:1.6;color:#CECBF6">過去の記録では、6時間半を下回る翌日は集中チェックが下がる傾向があります。今日は午前に重い会議を寄せすぎないのがおすすめです。</p>
   </div>
-  <p style="margin:0 0 6px;font-size:13px;font-weight:500;color:var(--tx)">推定生物学的年齢の推移（6ヶ月）</p>
-  <svg width="100%" height="96" viewBox="0 0 320 96" role="img" aria-label="生物学的年齢の低下トレンド">
+  <p style="margin:0 0 6px;font-size:13px;font-weight:500;color:var(--tx)">睡眠時間と集中チェックの傾向（6週間）</p>
+  <svg width="100%" height="96" viewBox="0 0 320 96" role="img" aria-label="睡眠時間と集中チェックの傾向グラフ">
     <defs><linearGradient id="lg3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#33C2A6"/><stop offset="1" stop-color="#A77BDB"/></linearGradient></defs>
     <line x1="10" y1="28" x2="310" y2="28" style="stroke:var(--bd)" stroke-width="1" stroke-dasharray="4 4"/>
-    <text x="12" y="24" font-size="10" class="svm">実年齢 24</text>
+    <text x="12" y="24" font-size="10" class="svm">集中が安定しやすいライン</text>
     <polyline points="10,40 60,38 110,42 160,48 210,54 260,58 310,62" fill="none" stroke="url(#lg3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="310" cy="62" r="4" fill="#7D72D0"/>
-    <text x="258" y="82" font-size="10" fill="#7D72D0" font-family="monospace">−1.6</text>
+    <text x="248" y="82" font-size="10" fill="#7D72D0" font-family="monospace">安定傾向</text>
   </svg>
   <div style="display:flex;gap:8px;margin-top:10px">
-    <div class="stc"><i class="ti ti-flame" style="font-size:19px;color:#1D9E75" aria-hidden="true"></i><p class="mono" style="margin:3px 0 0;font-size:15px;font-weight:500;color:var(--tx)">42日</p><p style="margin:0;font-size:10px;color:var(--mut)">ストリーク</p></div>
-    <div class="stc"><i class="ti ti-soup" style="font-size:19px;color:var(--tl)" aria-hidden="true"></i><p class="mono" style="margin:3px 0 0;font-size:15px;font-weight:500;color:var(--tx)">18食</p><p style="margin:0;font-size:10px;color:var(--mut)">調律食</p></div>
-    <div class="stc"><i class="ti ti-moon" style="font-size:19px;color:var(--pu)" aria-hidden="true"></i><p class="mono" style="margin:3px 0 0;font-size:15px;font-weight:500;color:var(--tx)">+31分</p><p style="margin:0;font-size:10px;color:var(--mut)">深い睡眠/週</p></div>
+    <div class="stc"><i class="ti ti-flame" style="font-size:19px;color:#1D9E75" aria-hidden="true"></i><p class="mono" style="margin:3px 0 0;font-size:15px;font-weight:500;color:var(--tx)">6週</p><p style="margin:0;font-size:10px;color:var(--mut)">記録</p></div>
+    <div class="stc"><i class="ti ti-soup" style="font-size:19px;color:var(--tl)" aria-hidden="true"></i><p class="mono" style="margin:3px 0 0;font-size:15px;font-weight:500;color:var(--tx)">12回</p><p style="margin:0;font-size:10px;color:var(--mut)">立て直し</p></div>
+    <div class="stc"><i class="ti ti-moon" style="font-size:19px;color:var(--pu)" aria-hidden="true"></i><p class="mono" style="margin:3px 0 0;font-size:15px;font-weight:500;color:var(--tx)">6:35</p><p style="margin:0;font-size:10px;color:var(--mut)">目安</p></div>
   </div>
-  <p style="margin:14px 0 0;text-align:center;font-size:8.5px;letter-spacing:1.6px;color:var(--mut)">FELSMATA Inc. ｜ Longevity Health OS</p>
+  <p style="margin:14px 0 0;text-align:center;font-size:8.5px;letter-spacing:1.6px;color:var(--mut)">FELSMATA Inc. ｜ Morning Tuning OS</p>
 </div>
 
 </div>
@@ -269,7 +269,7 @@ function setPersona(n){
   a.style.cssText=n===1?on:off;
   b.style.cssText=n===2?on:off;
 }
-var names={1:'GABA発酵リカバリースープ',2:'低GI玄米と麹の雑炊',3:'酒粕アミノ酸ドリンク'};
+var names={1:'発酵スープセット',2:'低GI玄米と麹の雑炊',3:'酒粕アミノ酸ドリンク'};
 function pick(n){
   [1,2,3].forEach(function(i){document.getElementById('f'+i).classList.toggle('sel',i===n)});
   var el=document.getElementById('fsel');
@@ -277,14 +277,14 @@ function pick(n){
 }
 var qa={
  1:{q:'なぜ深い睡眠が減った？',
-    a1:'水曜の会食で、就寝時にまだ消化と代謝が続いていたことが主因とみています。深部体温が下がりきらず、深い睡眠に入りづらい状態でした。責めるものではありません——原因がわかれば戻せます。',
-    a2:'原因は明確：21時以降の食事＋飲酒で深部体温が下がらなかった。対策は3つ。①夕食は20時まで ②アルコールは週2まで ③就寝90分前に入浴。今夜から実行。'},
- 2:{q:'プレゼン前の最適行動は？',
-    a1:'12:50頃、ランチ後に外を5分歩きましょう。食後血糖の急上昇を抑えて、14時の眠気のピークをずらせます。直前は深呼吸を4回——HRVの回復が数分で見えるはずです。',
-    a2:'ミッション：12:50に5分ウォーク→13:40にカフェイン最終ライン→13:55にボックス呼吸4セット。これで14時の覚醒度をピークに合わせる。'},
+    a1:'水曜の会食で、就寝時にまだ消化と代謝が続いていた可能性があります。深部体温が下がりきらず、深い睡眠に入りづらい傾向かもしれません。責めるものではありません——傾向が見えれば戻し方を選べます。',
+    a2:'見立て：21時以降の食事＋飲酒の影響がありそう。対策候補は3つ。①夕食を少し早める ②飲酒量を控えめにする ③就寝90分前に入浴。今夜試すなら①から。'},
+ 2:{q:'プレゼン前の一手は？',
+    a1:'12:50頃、ランチ後に外を5分歩くのがおすすめです。食後の眠気をやわらげ、14時の集中に入りやすくする狙いです。直前は深呼吸を4回——身体を落ち着ける一手として試せます。',
+    a2:'ミッション：12:50に5分ウォーク→13:40にカフェイン最終ライン→13:55にボックス呼吸4セット。14時に集中しやすい状態を狙う。'},
  3:{q:'3候補の違いは？',
-    a1:'スープは自律神経の回復向き、雑炊は血糖の安定と腸内環境向き、ドリンクは運動後の筋リカバリー向きです。今日のあなたのデータなら、いちばん効くのはスープ。でも雑炊の気分なら、それも十分良い選択ですよ。',
-    a2:'目的別に整理：①スープ=自律神経（今夜の最適解） ②雑炊=血糖・腸 ③ドリンク=筋回復。今日のデータ的にはスープ一択だが、継続には好みも重要。決めろ。'}
+    a1:'スープは温かく軽め、雑炊は腹持ちと発酵、ドリンクは運動後の水分補給向きです。今日の候補度が高いのはスープですが、雑炊の気分ならそれも十分良い選択ですよ。',
+    a2:'目的別に整理：①スープ=温かく軽め ②雑炊=腹持ちと発酵 ③ドリンク=水分補給。今日のおすすめの一つはスープ。ただし継続には好みも重要。選べ。'}
 };
 function ask(n){
   var c=document.getElementById('chat');
