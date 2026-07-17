@@ -34,9 +34,9 @@
 .ph.dark .gtx{background:linear-gradient(90deg,#C4A3F0,#AFA9EC,#5DCAA5);-webkit-background-clip:text;background-clip:text;color:transparent}
 .gbd{border-radius:16px;background:linear-gradient(var(--bg),var(--bg)) padding-box,linear-gradient(135deg,#A77BDB,#7D72D0,#33C2A6) border-box;border:1.5px solid transparent}
 .emx{background:linear-gradient(135deg,#101030,#534AB7);border:0.5px solid var(--embd)}
-.chk{display:flex;align-items:center;gap:10px;padding:11px 12px;border:0.5px solid var(--bd);border-radius:10px;margin-bottom:8px;cursor:pointer;background:var(--bg)}
+.chk{display:flex;align-items:center;gap:10px;padding:10px 12px;border:0.5px solid var(--bd);border-radius:10px;margin-bottom:7px;cursor:pointer;background:var(--bg)}
 .chk .bx{width:20px;height:20px;border:1.5px solid var(--mut);border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px}
-.chk span{font-size:13px;color:var(--tx)}
+.chk span{font-size:12.5px;color:var(--tx)}
 .chk.done .bx{background:linear-gradient(135deg,#7D72D0,#1D9E75);border-color:#534AB7}
 .chk.done span{color:var(--mut);text-decoration:line-through}
 .qchip{font-size:11px;padding:6px 12px;border-radius:99px;background:var(--bg);color:var(--pu);border:0.5px solid var(--pu);cursor:pointer;white-space:nowrap}
@@ -46,21 +46,34 @@
 .ubub{display:flex;justify-content:flex-end;margin-bottom:10px}
 .ubub p{margin:0;font-size:12.5px;line-height:1.6;color:#fff;background:linear-gradient(135deg,#101030,#534AB7);border:0.5px solid var(--embd);border-radius:14px 4px 14px 14px;padding:10px 13px;max-width:78%}
 .mono{font-family:var(--font-mono)}
-.mcd{background:var(--card);border-radius:12px;padding:12px 14px}
-.mcd .lb{margin:0;font-size:10.5px;color:var(--mut)}
-.mcd .vl{margin:4px 0 0;font-size:20px;font-weight:500;color:var(--tx)}
-.fcd{border:0.5px solid var(--bd);border-radius:14px;padding:11px 12px;display:flex;gap:11px;cursor:pointer;margin-bottom:8px;align-items:center;background:var(--bg)}
-.fcd.sel{background:linear-gradient(var(--bg),var(--bg)) padding-box,linear-gradient(135deg,#A77BDB,#7D72D0,#33C2A6) border-box;border:1.5px solid transparent}
-.fcd .sic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
-.fcd .fck{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--bd);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px}
-.fcd.sel .fck{background:linear-gradient(135deg,#7D72D0,#1D9E75);border-color:transparent}
+.mcd{background:var(--card);border-radius:12px;padding:10px 12px}
+.mcd .lb{margin:0;font-size:10px;color:var(--mut)}
+.mcd .vl{margin:3px 0 0;font-size:17px;font-weight:500;color:var(--tx)}
+.pbtn{font-size:11px;padding:4px 11px;border-radius:99px;cursor:pointer}
+.pbtn.on{border:none;background:linear-gradient(135deg,#101030,#534AB7);color:#fff}
+.pbtn.off{border:0.5px solid var(--bd);background:var(--bg);color:var(--sub)}
+.gchip{font-size:10.5px;padding:4px 10px;border-radius:99px;cursor:default}
+.gchip.on{background:var(--tlbg);color:var(--tl);border:0.5px solid var(--tl)}
+.gchip.off{background:var(--bg);color:var(--mut);border:0.5px solid var(--bd)}
+.tlrow{display:flex;gap:10px;margin-bottom:2px}
+.tlrow .tm{width:38px;flex-shrink:0;font-size:11px;color:var(--pu);font-weight:500;padding-top:1px;text-align:right}
+.tlrow .rail{width:14px;flex-shrink:0;display:flex;flex-direction:column;align-items:center}
+.tlrow .rail .pt{width:8px;height:8px;border-radius:50%;background:var(--pu);flex-shrink:0;margin-top:4px}
+.tlrow .rail .ln{width:1.5px;flex:1;background:var(--bd);min-height:14px}
+.tlrow .bd{padding-bottom:12px}
+.tlrow .bd b{display:block;font-size:12.5px;font-weight:500;color:var(--tx)}
+.tlrow .bd small{font-size:10.5px;color:var(--mut)}
 .tag{font-size:9.5px;padding:2px 8px;border-radius:99px}
-.stc{flex:1;border:0.5px solid var(--bd);border-radius:12px;padding:10px;text-align:center}
+.spc{border:0.5px solid var(--bd);border-radius:14px;padding:11px 12px;display:flex;gap:11px;margin-bottom:8px;align-items:center;background:var(--bg)}
+.spc .info{flex:1;min-width:0}
+.spc .info b{display:block;font-size:12.5px;font-weight:500;color:var(--tx)}
+.spc .info small{display:block;font-size:10.5px;color:var(--mut);margin:1px 0 4px}
+.spc .pic{width:64px;height:56px;border-radius:11px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff}
 </style>
-<div style="background:var(--surface-1);border-radius:16px;padding:1.5rem 1rem;display:flex;justify-content:center">
+<div style="background:var(--surface-1);border-radius:16px;padding:1.5rem 2px;display:flex;justify-content:center;width:100%;min-width:0">
 <div class="ph" id="ph" style="width:375px;max-width:100%;border:0.5px solid var(--border-strong);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;font-family:var(--font-sans)">
 
-<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 20px 0;font-size:12px;color:var(--tx)"><span style="font-weight:500" class="mono">21:04</span><span style="display:flex;gap:5px"><i class="ti ti-antenna-bars-5" aria-hidden="true"></i><i class="ti ti-wifi" aria-hidden="true"></i><i class="ti ti-battery-3" aria-hidden="true"></i></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 20px 0;font-size:12px;color:var(--tx)"><span style="font-weight:500" class="mono">07:12</span><span style="display:flex;gap:5px"><i class="ti ti-antenna-bars-5" aria-hidden="true"></i><i class="ti ti-wifi" aria-hidden="true"></i><i class="ti ti-battery-3" aria-hidden="true"></i></span></div>
 
 <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 20px 0">
   <span style="display:flex;align-items:center;gap:8px">
@@ -79,22 +92,32 @@
   </span>
 </div>
 
-<div style="flex:1;min-height:640px">
+<div style="flex:1;height:640px;overflow-y:auto;overscroll-behavior:contain">
 
-<div class="et-scr on" id="scr-home" style="padding:14px 20px 8px">
-  <p style="margin:0;font-size:11px;color:var(--mut)">7月3日（金）</p>
-  <p style="margin:0 0 12px;font-size:19px;font-weight:500;color:var(--tx)">おはよう、かづきさん</p>
-  <div class="gbd" style="display:flex;align-items:center;gap:18px;padding:14px 16px;margin-bottom:12px">
-    <svg width="104" height="104" viewBox="0 0 120 120" role="img" aria-label="リカバリースコア78">
+<!-- ===== ホーム（朝の調律） ===== -->
+<div class="et-scr on" id="scr-home" style="padding:14px 20px 16px">
+  <p style="margin:0;font-size:11px;color:var(--mut)">7月17日（金）</p>
+  <p style="margin:0 0 10px;font-size:19px;font-weight:500;color:var(--tx)">おはよう、かづきさん</p>
+
+  <p style="margin:0 0 6px;font-size:12.5px;font-weight:500;color:var(--tx)">主要データ</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px">
+    <div class="mcd" style="border-left:2px solid #1D9E75"><p class="lb">睡眠</p><p class="vl mono">6:42</p></div>
+    <div class="mcd" style="border-left:2px solid #7D72D0"><p class="lb">安静時心拍</p><p class="vl mono">58</p></div>
+    <div class="mcd" style="border-left:2px solid #1D9E75"><p class="lb">昨日の歩数</p><p class="vl mono">8,214</p></div>
+  </div>
+
+  <div class="gbd" style="display:flex;align-items:center;gap:16px;padding:13px 15px;margin-bottom:10px">
+    <svg width="96" height="96" viewBox="0 0 120 120" role="img" aria-label="今日のコンディションの目安 78">
       <defs><linearGradient id="sg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#33C2A6"/><stop offset="0.5" stop-color="#7D72D0"/><stop offset="1" stop-color="#A77BDB"/></linearGradient></defs>
       <g style="stroke:var(--bd)" stroke-width="1"><line x1="60" y1="2" x2="60" y2="8"/><line x1="60" y1="112" x2="60" y2="118"/><line x1="2" y1="60" x2="8" y2="60"/><line x1="112" y1="60" x2="118" y2="60"/></g>
       <circle cx="60" cy="60" r="50" fill="none" style="stroke:var(--trk)" stroke-width="9"/>
       <circle id="ring" cx="60" cy="60" r="50" fill="none" stroke="url(#sg)" stroke-width="9" stroke-linecap="round" stroke-dasharray="0 315" transform="rotate(-90 60 60)" style="transition:stroke-dasharray 1.2s ease"/>
       <text x="60" y="57" text-anchor="middle" font-size="29" font-weight="500" class="svt" font-family="monospace">78</text>
-      <text x="60" y="75" text-anchor="middle" font-size="9.5" class="svm">RECOVERY</text>
+      <text x="60" y="75" text-anchor="middle" font-size="9" class="svm">今日の目安</text>
     </svg>
     <div style="flex:1">
-      <p style="margin:0 0 8px;font-size:13px;font-weight:500"><span class="gtx">今日は「攻める」日</span></p>
+      <p style="margin:0 0 2px;font-size:9px;letter-spacing:1.4px;color:var(--mut)">AI STRATEGY</p>
+      <p style="margin:0 0 7px;font-size:13px;font-weight:500"><span class="gtx">今日は「余力あり」の日</span></p>
       <div style="font-size:11px;color:var(--sub);line-height:1.8">
         <div style="display:flex;justify-content:space-between"><span>睡眠</span><span class="mono" style="color:var(--tl);font-weight:500">92</span></div>
         <div style="display:flex;justify-content:space-between"><span>HRVバランス</span><span class="mono" style="color:var(--pu);font-weight:500">64</span></div>
@@ -102,18 +125,35 @@
       </div>
     </div>
   </div>
-  <button onclick="go('ai')" class="emx" style="width:100%;display:flex;align-items:center;gap:11px;padding:12px 14px;border-radius:14px;cursor:pointer;margin-bottom:14px;text-align:left">
+
+  <button onclick="go('ai')" class="emx" style="width:100%;display:flex;align-items:center;gap:11px;padding:11px 14px;border-radius:14px;cursor:pointer;margin-bottom:12px;text-align:left">
     <span style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#A77BDB,#33C2A6);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="ti ti-sparkles" style="color:#fff;font-size:16px" aria-hidden="true"></i></span>
-    <span style="flex:1"><span style="display:block;font-size:12.5px;color:#fff;font-weight:500">朝の調律が届いています</span><span style="display:block;font-size:11px;color:#CECBF6">深い睡眠が少なめ。朝の調律を確認 →</span></span>
+    <span style="flex:1"><span style="display:block;font-size:12.5px;color:#fff;font-weight:500">朝の調律が届いています</span><span style="display:block;font-size:11px;color:#CECBF6">深い睡眠が少なめ。今日の戦略を確認 →</span></span>
   </button>
-  <p style="margin:0 0 8px;font-size:13px;font-weight:500;color:var(--tx)">今日の調律</p>
-  <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>午前の集中前に5分の散歩</span></div>
-  <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>夜：立て直し食（3候補から選択）</span></div>
-  <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>22:30までに就寝準備</span></div>
+
+  <div style="background:var(--card);border-radius:12px;padding:11px 13px;margin-bottom:12px">
+    <p style="margin:0 0 3px;font-size:11px;font-weight:500;color:var(--tl)"><i class="ti ti-arrow-back-up" aria-hidden="true"></i> 昨日の振り返り</p>
+    <p style="margin:0;font-size:11.5px;line-height:1.6;color:var(--sub)">「食後の5分散歩」を実行できました。まず、できたことから数えます。</p>
+  </div>
+
+  <p style="margin:0 0 8px;font-size:12.5px;font-weight:500;color:var(--tx)">今日のスケジュール</p>
+  <div style="margin-bottom:6px">
+    <div class="tlrow"><span class="tm mono">09:30</span><span class="rail"><span class="pt"></span><span class="ln"></span></span><span class="bd"><b>チーム朝会</b><small>オンライン・30分</small></span></div>
+    <div class="tlrow"><span class="tm mono">14:00</span><span class="rail"><span class="pt" style="background:#1D9E75"></span><span class="ln"></span></span><span class="bd"><b>プレゼン発表</b><small>今日いちばんの山場</small></span></div>
+    <div class="tlrow"><span class="tm mono">19:00</span><span class="rail"><span class="pt"></span></span><span class="bd"><b>会食</b><small>帰宅は遅めの見込み</small></span></div>
+  </div>
+
+  <p style="margin:0 0 2px;font-size:12.5px;font-weight:500;color:var(--tx)">今日のアクション</p>
+  <p style="margin:0 0 8px;font-size:10.5px;color:var(--mut)">予定と体調に合わせた候補です。選ぶのは、あなた。</p>
+  <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>ランチ後に5分の散歩（14時の眠気対策）</span></div>
+  <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>会食後：水を1杯＋照明を少し落とす</span></div>
+  <div class="chk" onclick="this.classList.toggle('done')"><div class="bx"><i class="ti ti-check" aria-hidden="true"></i></div><span>23:00までに就寝準備</span></div>
+  <p style="margin:4px 0 0;font-size:10px;color:var(--mut)"><i class="ti ti-school" aria-hidden="true"></i> 「できそう／むずかしい」の反応は、明日の提案の調整に使われます。</p>
 </div>
 
-<div class="et-scr" id="scr-data" style="padding:14px 20px 8px">
-  <p style="margin:0 0 12px;font-size:19px;font-weight:500;color:var(--tx)">今日のからだ</p>
+<!-- ===== 分析 ===== -->
+<div class="et-scr" id="scr-data" style="padding:14px 20px 16px">
+  <p style="margin:0 0 12px;font-size:19px;font-weight:500;color:var(--tx)">分析</p>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
     <div class="mcd" style="border-left:2px solid #1D9E75"><p class="lb">SLEEP</p><p class="vl mono">6:42</p></div>
     <div class="mcd" style="border-left:2px solid #7D72D0"><p class="lb">HRV</p><p class="vl mono">48<span style="font-size:11px">ms</span></p></div>
@@ -126,33 +166,41 @@
     <g style="stroke:var(--trk)" stroke-width="1"><line x1="10" y1="24" x2="310" y2="24"/><line x1="10" y1="46" x2="310" y2="46"/><line x1="10" y1="68" x2="310" y2="68"/></g>
     <polyline points="10,50 60,42 110,55 160,60 210,38 260,44 310,30" fill="none" stroke="url(#lg2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="310" cy="30" r="4" fill="#7D72D0"/>
-    <text x="10" y="84" font-size="10" class="svm" font-family="monospace">6/27</text>
-    <text x="286" y="84" font-size="10" class="svm" font-family="monospace">7/3</text>
+    <text x="10" y="84" font-size="10" class="svm" font-family="monospace">7/11</text>
+    <text x="286" y="84" font-size="10" class="svm" font-family="monospace">7/17</text>
   </svg>
   <div class="emx" style="border-radius:14px;padding:13px 15px">
-    <p style="margin:0 0 5px;font-size:12px;font-weight:500;color:#9FE1CB"><i class="ti ti-cpu" aria-hidden="true"></i> AI解析：なぜ今朝は重い？</p>
-    <p style="margin:0;font-size:12px;line-height:1.7;color:#E8E7F5">水曜の会食（21時以降の食事＋飲酒）の翌朝に近い傾向があります。断定せず、根拠と今日試せる一手をあわせて提示します。</p>
+    <p style="margin:0 0 5px;font-size:12px;font-weight:500;color:#9FE1CB"><i class="ti ti-cpu" aria-hidden="true"></i> AI ANALYSIS：なぜHRVが下がった？</p>
+    <p style="margin:0;font-size:12px;line-height:1.7;color:#E8E7F5">21時以降の食事と飲酒が重なった翌朝に、HRVが下がる傾向がみられます。数字だけでなく、思い当たる背景まで整理して返します。</p>
   </div>
 </div>
 
-<div class="et-scr" id="scr-ai" style="display:none;flex-direction:column;padding:14px 20px 8px;min-height:600px">
+<!-- ===== AIアドバイス ===== -->
+<div class="et-scr" id="scr-ai" style="display:none;flex-direction:column;padding:14px 20px 16px;min-height:600px">
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
     <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#A77BDB,#7D72D0,#33C2A6);display:flex;align-items:center;justify-content:center"><i class="ti ti-sparkles" style="color:#fff;font-size:19px" aria-hidden="true"></i></div>
-    <div><p style="margin:0;font-size:15px;font-weight:500;color:var(--tx)">AIアドバイザー</p><p style="margin:0;font-size:10.5px;color:var(--tl)">● あなたの直近72hのデータを参照中</p></div>
+    <div><p style="margin:0;font-size:15px;font-weight:500;color:var(--tx)">AIアドバイス</p><p style="margin:0;font-size:10.5px;color:var(--tl)">● 直近72hのデータと今日の予定を参照中</p></div>
   </div>
-  <div style="display:flex;gap:6px;margin:8px 0 12px;align-items:center">
-    <span style="font-size:10.5px;color:var(--mut)">性格：</span>
-    <button id="p1" onclick="setPersona(1)" style="font-size:11px;padding:4px 11px;border-radius:99px;border:none;background:linear-gradient(135deg,#101030,#534AB7);color:#fff">寄り添い型</button>
-    <button id="p2" onclick="setPersona(2)" style="font-size:11px;padding:4px 11px;border-radius:99px;border:0.5px solid var(--bd);background:var(--bg);color:var(--sub)">コーチ型</button>
+  <div style="display:flex;gap:6px;margin:8px 0 6px;align-items:center;flex-wrap:wrap">
+    <span style="font-size:10.5px;color:var(--mut)">相棒：</span>
+    <button id="p1" class="pbtn on" onclick="setPersona(1)">ハル・明るく応援</button>
+    <button id="p2" class="pbtn off" onclick="setPersona(2)">ナギ・寄り添い</button>
+    <button id="p3" class="pbtn off" onclick="setPersona(3)">リク・数値と根拠</button>
+  </div>
+  <div style="display:flex;gap:6px;margin:0 0 12px;align-items:center">
+    <span style="font-size:10.5px;color:var(--mut)">目的：</span>
+    <span class="gchip on">パフォーマンス改善</span>
+    <span class="gchip off">睡眠の質</span>
+    <span class="gchip off">運動分析</span>
   </div>
   <div id="chat" style="flex:1">
-    <div class="abub"><div class="orb"><i class="ti ti-sparkles" style="color:#fff;font-size:14px" aria-hidden="true"></i></div><p>おはようございます。昨夜の睡眠は6時間42分——量は十分ですが、軽めがあなたの平常時より21分少なめでした。水曜の会食パターンに近い傾向がありそうです。</p></div>
-    <div class="abub"><div class="orb"><i class="ti ti-sparkles" style="color:#fff;font-size:14px" aria-hidden="true"></i></div><p>今夜の立て直し候補を「食」タブに3つ用意しました。重さを避けたい日には発酵スープがおすすめの一つですが、選ぶのはあなたです。</p></div>
+    <div class="abub"><div class="orb"><i class="ti ti-sparkles" style="color:#fff;font-size:14px" aria-hidden="true"></i></div><p>おはよう、かづきさん！昨夜の睡眠は6時間42分。深い睡眠がいつもより少し短めだったよ。今日は14時にプレゼン、19時から会食だね。</p></div>
+    <div class="abub"><div class="orb"><i class="ti ti-sparkles" style="color:#fff;font-size:14px" aria-hidden="true"></i></div><p>この予定なら、ランチ後の5分散歩がおすすめの一つ。ほかの候補もホームに用意したから、できそうなものを選んでね。</p></div>
   </div>
   <div style="display:flex;gap:7px;overflow-x:auto;padding:10px 0 8px">
-    <button class="qchip" onclick="ask(1)">なぜ軽めが減った？</button>
-    <button class="qchip" onclick="ask(2)">プレゼン前の一手は？</button>
-    <button class="qchip" onclick="ask(3)">3候補の違いは？</button>
+    <button class="qchip" onclick="ask(1)">なぜ深い睡眠が減った？</button>
+    <button class="qchip" onclick="ask(2)">プレゼン前にできることは？</button>
+    <button class="qchip" onclick="ask(3)">会食の日の整え方は？</button>
   </div>
   <div style="display:flex;gap:8px;align-items:center;border:0.5px solid var(--bd);border-radius:99px;padding:5px 5px 5px 16px">
     <span style="flex:1;font-size:12px;color:var(--mut)">メッセージを入力…</span>
@@ -160,88 +208,40 @@
   </div>
 </div>
 
-<div class="et-scr" id="scr-food" style="padding:14px 20px 8px">
-  <p style="margin:0 0 4px;font-size:19px;font-weight:500;color:var(--tx)">今夜の候補</p>
-  <p style="margin:0 0 12px;font-size:11.5px;line-height:1.6;color:var(--sub)">直近72hのデータから3品を選びました。今夜の気分で選んでください。</p>
-
-  <div class="fcd sel" id="f1" onclick="pick(1)">
-    <div class="sic" style="background:var(--tlbg);color:var(--tl)"><i class="ti ti-soup" aria-hidden="true"></i></div>
-    <div style="flex:1;min-width:0">
-      <p style="margin:0;font-size:13px;font-weight:500;color:var(--tx)">発酵スープセット</p>
-      <p style="margin:1px 0 4px;font-size:10.5px;color:var(--mut)">新潟・佐渡醸造</p>
-      <div style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">軽め</span><span class="tag" style="background:var(--pubg);color:var(--pu)">温かい</span></div>
-    </div>
-    <div style="text-align:right"><p class="mono" style="margin:0;font-size:15px;font-weight:500;color:var(--tl)">96</p><p style="margin:0;font-size:9px;color:var(--mut)">候補度</p></div>
-    <div class="fck"><i class="ti ti-check" aria-hidden="true"></i></div>
+<!-- ===== マップ ===== -->
+<div class="et-scr" id="scr-map" style="padding:14px 20px 16px">
+  <p style="margin:0 0 4px;font-size:19px;font-weight:500;color:var(--tx)">マップ</p>
+  <p style="margin:0 0 10px;font-size:11.5px;line-height:1.7;color:var(--sub)">今日の一手を、現在地から。体調と予定に合わせて、近くで立ち寄れる「整える場所」の候補を提案します。</p>
+  <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px">
+    <span style="display:inline-flex;align-items:center;gap:5px;font-size:10.5px;color:var(--tl);border:0.5px solid var(--tl);border-radius:99px;padding:3px 10px"><i class="ti ti-current-location" aria-hidden="true"></i>東京駅周辺・現在地から</span>
   </div>
-
-  <div class="fcd" id="f2" onclick="pick(2)">
-    <div class="sic" style="background:var(--pubg);color:var(--pu)"><i class="ti ti-bowl" aria-hidden="true"></i></div>
-    <div style="flex:1;min-width:0">
-      <p style="margin:0;font-size:13px;font-weight:500;color:var(--tx)">低GI玄米と麹の雑炊</p>
-      <p style="margin:1px 0 4px;font-size:10.5px;color:var(--mut)">新潟・魚沼ファーム</p>
-      <div style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">腹持ち</span><span class="tag" style="background:var(--pubg);color:var(--pu)">発酵</span></div>
-    </div>
-    <div style="text-align:right"><p class="mono" style="margin:0;font-size:15px;font-weight:500;color:var(--pu)">88</p><p style="margin:0;font-size:9px;color:var(--mut)">候補度</p></div>
-    <div class="fck"><i class="ti ti-check" aria-hidden="true"></i></div>
-  </div>
-
-  <div class="fcd" id="f3" onclick="pick(3)">
-    <div class="sic" style="background:var(--tlbg);color:var(--tl)"><i class="ti ti-bottle" aria-hidden="true"></i></div>
-    <div style="flex:1;min-width:0">
-      <p style="margin:0;font-size:13px;font-weight:500;color:var(--tx)">酒粕アミノ酸ドリンク</p>
-      <p style="margin:1px 0 4px;font-size:10.5px;color:var(--mut)">新潟・越後蔵元</p>
-      <div style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">ノンカフェイン</span><span class="tag" style="background:var(--pubg);color:var(--pu)">水分補給</span></div>
-    </div>
-    <div style="text-align:right"><p class="mono" style="margin:0;font-size:15px;font-weight:500;color:var(--pu)">84</p><p style="margin:0;font-size:9px;color:var(--mut)">候補度</p></div>
-    <div class="fck"><i class="ti ti-check" aria-hidden="true"></i></div>
-  </div>
-
-  <p id="fsel" style="margin:2px 0 12px;font-size:11px;color:var(--tl)"><i class="ti ti-truck-delivery" aria-hidden="true"></i> 選択中：発酵スープセット ｜ 7月6日（月）便に追加</p>
-
-  <div style="border:0.5px solid var(--bd);border-radius:14px;padding:12px 14px">
-    <div style="display:flex;justify-content:space-between;margin-bottom:7px"><span style="font-size:12px;font-weight:500;color:var(--tx)">今週のご褒美ロック解除</span><span id="wkcnt" class="mono" style="font-size:12px;color:var(--pu);font-weight:500">2/3</span></div>
-    <div style="height:8px;background:var(--trk);border-radius:99px;overflow:hidden"><div id="wkbar" style="height:100%;width:66%;background:linear-gradient(90deg,#33C2A6,#7D72D0,#A77BDB);border-radius:99px;transition:width .5s ease"></div></div>
-    <p style="margin:7px 0 0;font-size:11px;color:var(--mut)">あと1回の運動で、次回便に限定4品目めが解除</p>
-    <button class="emx" style="margin-top:10px;font-size:12px;padding:8px 16px;border-radius:99px;color:#fff;cursor:pointer" onclick="doWorkout(this)">今日の運動を記録する</button>
-  </div>
-</div>
-
-<div class="et-scr" id="scr-age" style="padding:14px 20px 8px">
-  <p style="margin:0 0 12px;font-size:19px;font-weight:500;color:var(--tx)">マイ・スリープライン</p>
-  <div class="emx" style="border-radius:16px;padding:16px;margin-bottom:12px">
-    <p style="margin:0 0 10px;font-size:11px;color:#AFA9EC;letter-spacing:1px">MY SLEEP LINE</p>
-    <div style="display:flex;align-items:baseline;gap:12px">
-      <span class="mono" style="font-size:38px;font-weight:500;color:#fff">6:35</span>
-      <span style="font-size:12px;color:#9FE1CB">集中チェックが安定しやすい睡眠ライン</span>
-    </div>
-    <p style="margin:8px 0 0;font-size:11px;line-height:1.6;color:#CECBF6">過去の記録では、6時間半を下回る翌日は集中チェックが下がる傾向があります。今日は午前に重い会議を寄せすぎないのがおすすめです。</p>
-  </div>
-  <p style="margin:0 0 6px;font-size:13px;font-weight:500;color:var(--tx)">睡眠時間と集中チェックの傾向（6週間）</p>
-  <svg width="100%" height="96" viewBox="0 0 320 96" role="img" aria-label="睡眠時間と集中チェックの傾向グラフ">
-    <defs><linearGradient id="lg3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#33C2A6"/><stop offset="1" stop-color="#A77BDB"/></linearGradient></defs>
-    <line x1="10" y1="28" x2="310" y2="28" style="stroke:var(--bd)" stroke-width="1" stroke-dasharray="4 4"/>
-    <text x="12" y="24" font-size="10" class="svm">集中が安定しやすいライン</text>
-    <polyline points="10,40 60,38 110,42 160,48 210,54 260,58 310,62" fill="none" stroke="url(#lg3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="310" cy="62" r="4" fill="#7D72D0"/>
-    <text x="248" y="82" font-size="10" fill="#7D72D0" font-family="monospace">安定傾向</text>
+  <svg width="100%" height="110" viewBox="0 0 320 110" role="img" aria-label="周辺マップのイメージ" style="border-radius:14px;background:var(--card);margin-bottom:10px">
+    <g style="stroke:var(--bd)" stroke-width="1.5"><line x1="0" y1="38" x2="320" y2="30"/><line x1="0" y1="78" x2="320" y2="86"/><line x1="70" y1="0" x2="82" y2="110"/><line x1="190" y1="0" x2="182" y2="110"/><line x1="262" y1="0" x2="270" y2="110"/></g>
+    <circle cx="150" cy="60" r="7" fill="#534AB7"/><circle cx="150" cy="60" r="13" fill="#534AB7" opacity=".18"/>
+    <g font-size="15"><text x="98" y="34">📍</text><text x="222" y="52">📍</text><text x="126" y="98">📍</text></g>
   </svg>
-  <div style="display:flex;gap:8px;margin-top:10px">
-    <div class="stc"><i class="ti ti-flame" style="font-size:19px;color:#1D9E75" aria-hidden="true"></i><p class="mono" style="margin:3px 0 0;font-size:15px;font-weight:500;color:var(--tx)">6週</p><p style="margin:0;font-size:10px;color:var(--mut)">記録</p></div>
-    <div class="stc"><i class="ti ti-soup" style="font-size:19px;color:var(--tl)" aria-hidden="true"></i><p class="mono" style="margin:3px 0 0;font-size:15px;font-weight:500;color:var(--tx)">12回</p><p style="margin:0;font-size:10px;color:var(--mut)">立て直し</p></div>
-    <div class="stc"><i class="ti ti-moon" style="font-size:19px;color:var(--pu)" aria-hidden="true"></i><p class="mono" style="margin:3px 0 0;font-size:15px;font-weight:500;color:var(--tx)">6:35</p><p style="margin:0;font-size:10px;color:var(--mut)">目安</p></div>
+  <div class="spc">
+    <div class="info"><b>KITTEガーデンテラス</b><small>徒歩3分 ・ 屋上庭園</small><span style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">小休止</span><span class="tag" style="background:var(--pubg);color:var(--pu)">外の空気</span></span></div>
+    <div class="pic" style="background:linear-gradient(135deg,#33C2A6,#7D72D0)"><i class="ti ti-trees" aria-hidden="true"></i></div>
   </div>
-  <p style="margin:14px 0 0;text-align:center;font-size:8.5px;letter-spacing:1.6px;color:var(--mut)">FELSMATA Inc. ｜ Morning Tuning OS</p>
+  <div class="spc">
+    <div class="info"><b>皇居外苑 芝生エリア</b><small>徒歩8分 ・ 散歩コース</small><span style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">5分散歩</span><span class="tag" style="background:var(--pubg);color:var(--pu)">リフレッシュ</span></span></div>
+    <div class="pic" style="background:linear-gradient(135deg,#7D72D0,#A77BDB)"><i class="ti ti-walk" aria-hidden="true"></i></div>
+  </div>
+  <div class="spc">
+    <div class="info"><b>八重洲リカバリーラウンジ</b><small>徒歩4分 ・ 仮眠／ストレッチ</small><span style="display:flex;gap:5px"><span class="tag" style="background:var(--tlbg);color:var(--tl)">整える</span><span class="tag" style="background:var(--pubg);color:var(--pu)">仮眠</span></span></div>
+    <div class="pic" style="background:linear-gradient(135deg,#A77BDB,#33C2A6)"><i class="ti ti-zzz" aria-hidden="true"></i></div>
+  </div>
+  <p style="margin:4px 0 0;font-size:10px;color:var(--mut)">※ 候補はあくまで選択肢です。行くかどうかは、あなたが決めてください。</p>
 </div>
 
 </div>
 
 <div style="display:flex;border-top:0.5px solid var(--bd);align-items:flex-end">
   <button class="et-tab on" id="tb-home" onclick="go('home')"><i class="ti ti-home" aria-hidden="true"></i>ホーム</button>
-  <button class="et-tab" id="tb-data" onclick="go('data')"><i class="ti ti-chart-line" aria-hidden="true"></i>データ</button>
+  <button class="et-tab" id="tb-data" onclick="go('data')"><i class="ti ti-chart-line" aria-hidden="true"></i>分析</button>
   <button class="et-tab" id="tb-ai" onclick="go('ai')" style="position:relative;padding-top:0"><span style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#A77BDB,#7D72D0,#33C2A6);display:flex;align-items:center;justify-content:center;margin-top:-14px;border:3px solid var(--bg)"><i class="ti ti-sparkles" style="color:#fff;font-size:20px" aria-hidden="true"></i></span>AI</button>
-  <button class="et-tab" id="tb-food" onclick="go('food')"><i class="ti ti-soup" aria-hidden="true"></i>食</button>
-  <button class="et-tab" id="tb-age" onclick="go('age')"><i class="ti ti-timeline" aria-hidden="true"></i>軌跡</button>
+  <button class="et-tab" id="tb-map" onclick="go('map')"><i class="ti ti-map-pin" aria-hidden="true"></i>マップ</button>
 </div>
 </div>
 <script>
@@ -263,43 +263,31 @@ try{parent.postMessage({felstuningScreen:'home'},'*')}catch(e){}
 var persona=1;
 function setPersona(n){
   persona=n;
-  var a=document.getElementById('p1'),b=document.getElementById('p2');
-  var on='border:none;background:linear-gradient(135deg,#101030,#534AB7);color:#fff;font-size:11px;padding:4px 11px;border-radius:99px;';
-  var off='border:0.5px solid var(--bd);background:var(--bg);color:var(--sub);font-size:11px;padding:4px 11px;border-radius:99px;';
-  a.style.cssText=n===1?on:off;
-  b.style.cssText=n===2?on:off;
-}
-var names={1:'発酵スープセット',2:'低GI玄米と麹の雑炊',3:'酒粕アミノ酸ドリンク'};
-function pick(n){
-  [1,2,3].forEach(function(i){document.getElementById('f'+i).classList.toggle('sel',i===n)});
-  var el=document.getElementById('fsel');
-  el.innerHTML='<i class="ti ti-truck-delivery" aria-hidden="true"></i> 選択中：'+names[n]+' ｜ 7月6日（月）便に追加';
+  [1,2,3].forEach(function(i){
+    var b=document.getElementById('p'+i);
+    b.className='pbtn '+(i===n?'on':'off');
+  });
 }
 var qa={
  1:{q:'なぜ深い睡眠が減った？',
-    a1:'水曜の会食で、就寝時にまだ消化と代謝が続いていた可能性があります。深部体温が下がりきらず、深い睡眠に入りづらい傾向かもしれません。責めるものではありません——傾向が見えれば戻し方を選べます。',
-    a2:'見立て：21時以降の食事＋飲酒の影響がありそう。対策候補は3つ。①夕食を少し早める ②飲酒量を控えめにする ③就寝90分前に入浴。今夜試すなら①から。'},
- 2:{q:'プレゼン前の一手は？',
-    a1:'12:50頃、ランチ後に外を5分歩くのがおすすめです。食後の眠気をやわらげ、14時の集中に入りやすくする狙いです。直前は深呼吸を4回——身体を落ち着ける一手として試せます。',
-    a2:'ミッション：12:50に5分ウォーク→13:40にカフェイン最終ライン→13:55にボックス呼吸4セット。14時に集中しやすい状態を狙う。'},
- 3:{q:'3候補の違いは？',
-    a1:'スープは温かく軽め、雑炊は腹持ちと発酵、ドリンクは運動後の水分補給向きです。今日の候補度が高いのはスープですが、雑炊の気分ならそれも十分良い選択ですよ。',
-    a2:'目的別に整理：①スープ=温かく軽め ②雑炊=腹持ちと発酵 ③ドリンク=水分補給。今日のおすすめの一つはスープ。ただし継続には好みも重要。選べ。'}
+    a1:'昨日は21時すぎの食事と飲酒があったみたいだね。からだが消化をがんばってた分、深い睡眠が短くなった可能性があるよ。見当がつけば大丈夫、今夜から一緒に戻していこう！',
+    a2:'昨夜は遅めの食事と飲酒が重なっていましたね。からだが休みきれなかったのかもしれません。責めるものではありませんよ。今夜は、照明を少し早めに落とすところから始めてみましょうか。',
+    a3:'就寝2時間前以内の食事＋飲酒があった翌朝に、深い睡眠が平均21分短くなる傾向が、あなたの直近データにみられます。今夜は20時までに夕食を済ませて比較すると、検証になります。'},
+ 2:{q:'プレゼン前にできることは？',
+    a1:'14時のプレゼンだね！おすすめは12:50のランチ後5分散歩。午後の眠気のピークをずらせるよ。直前は深呼吸を4回。準備してきたんだから、きっと大丈夫！',
+    a2:'緊張しますよね。12:50ごろ、外の空気を5分だけ吸いに出ませんか。徒歩3分のKITTEガーデンテラスが静かです。直前はゆっくり深呼吸を4回。それで十分ですよ。',
+    a3:'候補は3つ。①12:50に5分歩行（食後の眠気対策）②カフェインは13:40を最終ラインに ③13:55に呼吸を4セット。実行しやすいものから選んでください。'},
+ 3:{q:'会食の日の整え方は？',
+    a1:'19時から会食だね。今日はしっかり楽しんでOK！帰ったら水を1杯と、照明を少し暗くするだけでも変わるよ。明日の朝、一緒に振り返ろう！',
+    a2:'会食は大切な時間ですから、無理に我慢しなくて大丈夫です。帰宅後に水分を少しと、寝る前の画面時間を短めに。それだけでも、からだは整いやすくなりますよ。',
+    a3:'あなたのデータでは、会食翌朝はHRVが下がる傾向があります。候補：①締めの炭水化物を軽めに ②帰宅後に水300ml ③就寝はいつも＋30分以内に。どれか一つで十分です。'}
 };
 function ask(n){
   var c=document.getElementById('chat');
   var u=document.createElement('div');u.className='ubub';u.innerHTML='<p></p>';u.querySelector('p').textContent=qa[n].q;c.appendChild(u);
   var a=document.createElement('div');a.className='abub';a.innerHTML='<div class="orb"><i class="ti ti-sparkles" style="color:#fff;font-size:14px" aria-hidden="true"></i></div><p></p>';
-  a.querySelector('p').textContent=persona===1?qa[n].a1:qa[n].a2;
+  a.querySelector('p').textContent=qa[n]['a'+persona];
   setTimeout(function(){c.appendChild(a)},400);
-}
-var done=false;
-function doWorkout(btn){
-  if(done)return;done=true;
-  document.getElementById('wkbar').style.width='100%';
-  document.getElementById('wkcnt').textContent='3/3';
-  btn.textContent='限定4品目めが解除されました';
-  btn.style.background='linear-gradient(135deg,#1D9E75,#0F6E56)';
 }
 setTimeout(function(){document.getElementById('ring').setAttribute('stroke-dasharray','245 315')},100);
 </script></body>
